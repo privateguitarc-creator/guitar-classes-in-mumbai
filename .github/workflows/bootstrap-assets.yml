@@ -1,0 +1,49 @@
+name: Bootstrap website assets
+
+on:
+  push:
+    paths:
+      - ".github/workflows/bootstrap-assets.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bootstrap:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download current production assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://guitar-classes-in-mumbai.vercel.app"
+          assets=(
+            "AG.png" "1.png" "2.png" "3.png" "4.png" "5.png"
+            "SS1.png" "SS2.png" "SS3.png" "SS4.png" "SS5.png" "SS6.png" "SS7.png"
+            "a.png" "b.png" "c.png" "e.jpg" "f.png" "g.jpg" "h.png" "i.png" "j.png" "k.png" "l.jpg" "m.png"
+            "V1.mp4" "V2.mp4"
+          )
+          for asset in "${assets[@]}"; do
+            echo "Downloading $asset"
+            curl --fail --location --retry 3 --retry-delay 2 "$base/$asset" --output "$asset"
+            test -s "$asset"
+          done
+
+      - name: Commit assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add AG.png 1.png 2.png 3.png 4.png 5.png SS*.png a.png b.png c.png e.jpg f.png g.jpg h.png i.png j.png k.png l.jpg m.png V1.mp4 V2.mp4
+          if git diff --cached --quiet; then
+            echo "Assets already present."
+            exit 0
+          fi
+          git commit -m "Add current production website assets"
+          git push
