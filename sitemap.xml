@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://guitar-classes-in-mumbai.vercel.app/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <image:image>
       <image:loc>https://guitar-classes-in-mumbai.vercel.app/AG.png</image:loc>
       <image:title>Aniket Gawande - Guitar Classes in Mumbai</image:title>
@@ -10,18 +10,38 @@
   </url>
   <url>
     <loc>https://guitar-classes-in-mumbai.vercel.app/home-guitar-classes-mumbai/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-30</lastmod>
   </url>
   <url>
     <loc>https://guitar-classes-in-mumbai.vercel.app/guitar-classes-mumbai-fees/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-30</lastmod>
   </url>
   <url>
     <loc>https://guitar-classes-in-mumbai.vercel.app/guitar-classes-for-beginners-mumbai/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-30</lastmod>
   </url>
   <url>
     <loc>https://guitar-classes-in-mumbai.vercel.app/guitar-classes-for-adults-mumbai/</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://guitar-classes-in-mumbai.vercel.app/about-aniket-gawande-guitar-instructor-mumbai/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://guitar-classes-in-mumbai.vercel.app/guides/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://guitar-classes-in-mumbai.vercel.app/guides/how-to-choose-guitar-teacher-mumbai/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://guitar-classes-in-mumbai.vercel.app/guides/home-guitar-lessons-vs-music-academy-mumbai/</loc>
+    <lastmod>2026-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://guitar-classes-in-mumbai.vercel.app/guides/beginner-guitar-practice-plan/</loc>
+    <lastmod>2026-09-30</lastmod>
   </url>
 </urlset>
