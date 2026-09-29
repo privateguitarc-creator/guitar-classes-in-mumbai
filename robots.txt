@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://guitar-classes-in-mumbai.vercel.app/sitemap.xml
