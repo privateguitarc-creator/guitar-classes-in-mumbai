@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Guitar Practice Planner & Timer | Beginner Practice Tool</title>
+  <meta name="description" content="Build a 15, 30 or 45 minute beginner guitar practice routine with a free browser timer, chord-switch counter and metronome. No signup required.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="Aniket Gawande">
+  <link rel="canonical" href="https://guitar-classes-in-mumbai.vercel.app/tools/guitar-practice-planner/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Guitar Practice Planner & Timer">
+  <meta property="og:description" content="Plan and run a focused beginner guitar practice session in your browser. No signup required.">
+  <meta property="og:url" content="https://guitar-classes-in-mumbai.vercel.app/tools/guitar-practice-planner/">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"Free Guitar Practice Planner & Timer",
+    "url":"https://guitar-classes-in-mumbai.vercel.app/tools/guitar-practice-planner/",
+    "applicationCategory":"EducationalApplication",
+    "operatingSystem":"Any modern web browser",
+    "isAccessibleForFree":true,
+    "description":"A free browser-based guitar practice planner with session presets, timer, chord-switch counter and metronome.",
+    "author":{"@type":"Person","name":"Aniket Gawande","url":"https://guitar-classes-in-mumbai.vercel.app/about-aniket-gawande-guitar-instructor-mumbai/"},
+    "publisher":{"@type":"EducationalOrganization","@id":"https://guitar-classes-in-mumbai.vercel.app/#organization"}
+  }
+  </script>
+  <style>
+    :root{--bg:#f7f3eb;--ink:#181818;--muted:#666;--card:#fff;--line:#e6ded1;--gold:#b48a45;--dark:#111114;--green:#1f7a4d}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+    a{color:inherit}.wrap{max-width:980px;margin:auto;padding:0 20px}nav{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:20px 0}
+    .brand{text-decoration:none;font-weight:800}.small-link{font-size:.9rem;color:#555}
+    header{background:var(--dark);color:white;padding:60px 0 52px}.kicker{text-transform:uppercase;letter-spacing:.14em;color:#e6c27d;font-size:.74rem;font-weight:800}
+    h1,h2,h3{font-family:Georgia,serif;line-height:1.08}h1{font-size:clamp(2.5rem,7vw,4.8rem);margin:10px 0 16px}.lead{max-width:760px;color:#d7d7d7;font-size:1.05rem}
+    main{padding:40px 0 60px}.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin-bottom:22px}
+    .preset-row{display:flex;gap:10px;flex-wrap:wrap}.preset,.btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer}
+    .preset.active,.btn.primary{background:var(--dark);color:#fff;border-color:var(--dark)}.btn.gold{background:var(--gold);color:white;border-color:var(--gold)}
+    .routine{display:grid;gap:12px;margin-top:18px}.item{display:grid;grid-template-columns:1fr 120px;gap:12px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:14px}
+    .item input{width:100%;font:inherit;border:0;background:transparent;color:var(--ink)}.item .mins{display:flex;align-items:center;gap:6px}.item .mins input{width:60px;border:1px solid var(--line);border-radius:8px;padding:7px;text-align:center}
+    .session{display:grid;grid-template-columns:1.3fr .7fr;gap:20px}.timer{text-align:center}.current{font-weight:800;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;font-size:.75rem}
+    .clock{font-size:clamp(3rem,12vw,6rem);font-weight:800;letter-spacing:-.05em;margin:10px 0}.controls{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .progress{height:10px;background:#eee5d8;border-radius:999px;overflow:hidden;margin-top:18px}.progress span{display:block;height:100%;width:0;background:var(--gold);transition:width .25s linear}
+    .tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.tool{border:1px solid var(--line);border-radius:14px;padding:16px}.tool h3{margin:0 0 10px}.big-number{font-size:2.2rem;font-weight:800}
+    .counter-controls{display:flex;gap:8px}.counter-controls button{flex:1}.bpm{display:flex;align-items:center;gap:10px}.bpm input{width:90px;padding:9px;border:1px solid var(--line);border-radius:10px}
+    .note{background:#fff7e9;border-left:4px solid var(--gold);padding:16px 18px;border-radius:10px;margin-top:18px}.saved{font-size:.85rem;color:var(--green);min-height:1.4em;margin-top:8px}
+    .why h2{font-size:2rem}.why p{color:#444}.cta{background:var(--dark);color:#fff;border-radius:18px;padding:26px}.cta a{color:#f0c778;font-weight:700}
+    footer{border-top:1px solid var(--line);padding:26px 0 40px;color:#6a6a6a;font-size:.86rem}
+    @media(max-width:760px){.session,.tools-grid{grid-template-columns:1fr}.item{grid-template-columns:1fr}.item .mins{justify-content:flex-start}header{padding:48px 0}}
+  </style>
+</head>
+<body>
+  <div class="wrap"><nav><a class="brand" href="/">← Guitar Classes in Mumbai</a><a class="small-link" href="/guides/beginner-guitar-practice-plan/">Practice guide</a></nav></div>
+  <header><div class="wrap">
+    <div class="kicker">Free · no signup · works in your browser</div>
+    <h1>Guitar Practice Planner & Timer</h1>
+    <p class="lead">Choose a beginner routine, adjust the practice blocks, then run the session with a timer. Use the chord-switch counter and simple metronome to keep practice measurable instead of aimless.</p>
+  </div></header>
+
+  <main class="wrap">
+    <section class="panel">
+      <h2>1. Build your practice session</h2>
+      <div class="preset-row">
+        <button class="preset active" data-preset="15">15 minutes</button>
+        <button class="preset" data-preset="30">30 minutes</button>
+        <button class="preset" data-preset="45">45 minutes</button>
+      </div>
+      <div id="routine" class="routine"></div>
+      <div class="saved" id="savedMsg"></div>
+    </section>
+
+    <section class="session">
+      <div class="panel timer">
+        <div class="current" id="currentLabel">Ready</div>
+        <div class="clock" id="clock">15:00</div>
+        <div class="controls">
+          <button class="btn primary" id="startBtn">Start</button>
+          <button class="btn" id="pauseBtn">Pause</button>
+          <button class="btn" id="nextBtn">Next block</button>
+          <button class="btn" id="resetBtn">Reset</button>
+        </div>
+        <div class="progress"><span id="progressBar"></span></div>
+      </div>
+
+      <div class="panel">
+        <h2>Session tools</h2>
+        <div class="tools-grid">
+          <div class="tool">
+            <h3>Chord-switch counter</h3>
+            <p class="small-link">Count clean switches during one minute.</p>
+            <div class="big-number" id="switchCount">0</div>
+            <div class="counter-controls">
+              <button class="btn gold" id="plusSwitch">+1</button>
+              <button class="btn" id="resetSwitch">Reset</button>
+            </div>
+          </div>
+          <div class="tool">
+            <h3>Simple metronome</h3>
+            <p class="small-link">Use a comfortable tempo and increase only when the rhythm stays clean.</p>
+            <div class="bpm"><input id="bpm" type="number" min="40" max="200" value="70"><span>BPM</span></div>
+            <button class="btn" id="metroBtn" style="margin-top:10px">Start metronome</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel why">
+      <h2>What should a beginner practise?</h2>
+      <p>A useful beginner session usually mixes a short warm-up, chord changes, rhythm or strumming, and time spent applying those skills to a song. The exact balance depends on what you are currently struggling with, which is why every block above can be edited.</p>
+      <div class="note"><strong>Keep it measurable:</strong> write down one thing you want to improve before starting. Examples: cleaner G–C switches, steadier eighth-note strumming, or playing one verse without stopping.</div>
+      <p>For a fuller explanation of how to structure practice, read the <a href="/guides/beginner-guitar-practice-plan/"><strong>beginner guitar practice plan</strong></a>.</p>
+    </section>
+
+    <section class="cta">
+      <h2>Want feedback on what you are practising?</h2>
+      <p>This tool is free for anyone to use. If you are in Mumbai and want private guitar guidance at your home, see the <a href="/home-guitar-classes-mumbai/">home guitar lesson format</a>, <a href="/guitar-classes-mumbai-fees/">current fees</a>, or <a href="/areas-we-serve-mumbai/">areas served</a>.</p>
+    </section>
+  </main>
+
+  <footer><div class="wrap">© 2026 Guitar Classes in Mumbai. Practice quality matters more than simply running the timer.</div></footer>
+
+  <script>
+    const presets = {
+      15: [
+        {name:'Tune + warm up', minutes:3},
+        {name:'Chord changes', minutes:5},
+        {name:'Rhythm / strumming', minutes:4},
+        {name:'Song practice', minutes:3}
+      ],
+      30: [
+        {name:'Tune + warm up', minutes:5},
+        {name:'Chord changes', minutes:8},
+        {name:'Rhythm / strumming', minutes:7},
+        {name:'Song practice', minutes:8},
+        {name:'Review + note one goal', minutes:2}
+      ],
+      45: [
+        {name:'Tune + warm up', minutes:5},
+        {name:'Chord changes', minutes:10},
+        {name:'Rhythm / strumming', minutes:10},
+        {name:'Song practice', minutes:15},
+        {name:'Listening / ear work', minutes:5}
+      ]
+    };
+
+    let routine = JSON.parse(localStorage.getItem('guitarPracticeRoutine') || 'null') || structuredClone(presets[15]);
+    let activePreset = Number(localStorage.getItem('guitarPracticePreset') || 15);
+    let currentIndex = 0;
+    let remaining = totalSeconds();
+    let totalAtStart = remaining;
+    let interval = null;
+    let running = false;
+    let switchCount = 0;
+    let metroTimer = null;
+    let audioCtx = null;
+
+    const el = id => document.getElementById(id);
+    const routineEl = el('routine');
+
+    function totalSeconds(){ return routine.reduce((sum,x)=>sum + Math.max(1,Number(x.minutes)||1)*60,0); }
+
+    function renderRoutine(){
+      routineEl.innerHTML='';
+      routine.forEach((item,i)=>{
+        const row=document.createElement('div'); row.className='item';
+        row.innerHTML=`<input aria-label="Practice item ${i+1}" value="${item.name.replaceAll('"','&quot;')}" data-name="${i}">
+          <div class="mins"><input aria-label="Minutes for item ${i+1}" type="number" min="1" max="60" value="${item.minutes}" data-mins="${i}"><span>min</span></div>`;
+        routineEl.appendChild(row);
+      });
+      routineEl.querySelectorAll('[data-name]').forEach(input=>input.addEventListener('input',e=>{ routine[Number(e.target.dataset.name)].name=e.target.value; saveRoutine(); }));
+      routineEl.querySelectorAll('[data-mins]').forEach(input=>input.addEventListener('change',e=>{ routine[Number(e.target.dataset.mins)].minutes=Math.max(1,Number(e.target.value)||1); saveRoutine(); resetSession(); }));
+      updatePresetButtons();
+      if(!running) resetSession();
+    }
+
+    function saveRoutine(){
+      localStorage.setItem('guitarPracticeRoutine',JSON.stringify(routine));
+      localStorage.setItem('guitarPracticePreset',String(activePreset));
+      el('savedMsg').textContent='Saved on this device';
+      setTimeout(()=>el('savedMsg').textContent='',1200);
+    }
+
+    function updatePresetButtons(){
+      document.querySelectorAll('.preset').forEach(b=>b.classList.toggle('active',Number(b.dataset.preset)===activePreset));
+    }
+
+    function format(sec){ const m=Math.floor(sec/60); const s=sec%60; return `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`; }
+
+    function blockStartSeconds(index){ return routine.slice(0,index).reduce((sum,x)=>sum+Number(x.minutes)*60,0); }
+    function blockEndSeconds(index){ return blockStartSeconds(index)+Number(routine[index].minutes)*60; }
+
+    function elapsed(){ return totalAtStart-remaining; }
+
+    function syncCurrentBlock(){
+      const e=elapsed();
+      let idx=routine.findIndex((_,i)=>e < blockEndSeconds(i));
+      if(idx<0) idx=routine.length-1;
+      currentIndex=idx;
+      const into=e-blockStartSeconds(idx);
+      const blockRemain=Math.max(0,Number(routine[idx].minutes)*60-into);
+      el('currentLabel').textContent=`${routine[idx].name} · ${format(blockRemain)} left in block`;
+      el('clock').textContent=format(remaining);
+      el('progressBar').style.width=`${Math.min(100,(elapsed()/Math.max(1,totalAtStart))*100)}%`;
+    }
+
+    function tick(){
+      if(remaining<=0){
+        clearInterval(interval); interval=null; running=false;
+        el('currentLabel').textContent='Session complete';
+        el('clock').textContent='00:00';
+        el('progressBar').style.width='100%';
+        beep(880,.18);
+        return;
+      }
+      remaining--; syncCurrentBlock();
+      if(remaining>0 && elapsed()===blockStartSeconds(currentIndex+1)) beep(660,.12);
+    }
+
+    function startSession(){
+      if(running) return;
+      if(remaining<=0) resetSession();
+      running=true; interval=setInterval(tick,1000); syncCurrentBlock();
+    }
+    function pauseSession(){ running=false; if(interval){clearInterval(interval);interval=null;} }
+    function resetSession(){ pauseSession(); currentIndex=0; totalAtStart=totalSeconds(); remaining=totalAtStart; syncCurrentBlock(); }
+    function nextBlock(){
+      pauseSession();
+      if(currentIndex>=routine.length-1){ remaining=0; syncCurrentBlock(); return; }
+      const target=blockEndSeconds(currentIndex);
+      remaining=Math.max(0,totalAtStart-target);
+      currentIndex++; syncCurrentBlock();
+    }
+
+    function beep(freq=700,duration=.08){
+      try{
+        audioCtx=audioCtx || new (window.AudioContext||window.webkitAudioContext)();
+        const o=audioCtx.createOscillator(), g=audioCtx.createGain();
+        o.frequency.value=freq; g.gain.value=.06; o.connect(g); g.connect(audioCtx.destination);
+        o.start(); o.stop(audioCtx.currentTime+duration);
+      }catch(e){}
+    }
+
+    function startMetro(){
+      if(metroTimer){ clearInterval(metroTimer); metroTimer=null; el('metroBtn').textContent='Start metronome'; return; }
+      const bpm=Math.min(200,Math.max(40,Number(el('bpm').value)||70));
+      el('bpm').value=bpm;
+      beep(900,.05);
+      metroTimer=setInterval(()=>beep(900,.05),60000/bpm);
+      el('metroBtn').textContent='Stop metronome';
+    }
+
+    document.querySelectorAll('.preset').forEach(btn=>btn.addEventListener('click',()=>{
+      activePreset=Number(btn.dataset.preset);
+      routine=structuredClone(presets[activePreset]);
+      saveRoutine(); renderRoutine();
+    }));
+    el('startBtn').addEventListener('click',startSession);
+    el('pauseBtn').addEventListener('click',pauseSession);
+    el('resetBtn').addEventListener('click',resetSession);
+    el('nextBtn').addEventListener('click',nextBlock);
+    el('plusSwitch').addEventListener('click',()=>{switchCount++;el('switchCount').textContent=switchCount;});
+    el('resetSwitch').addEventListener('click',()=>{switchCount=0;el('switchCount').textContent='0';});
+    el('metroBtn').addEventListener('click',startMetro);
+
+    renderRoutine();
+  </script>
+</body>
+</html>
