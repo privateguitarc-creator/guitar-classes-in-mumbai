@@ -18,15 +18,29 @@
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"WebApplication",
-    "name":"Free Guitar Practice Planner & Timer",
-    "url":"https://guitar-classes-in-mumbai.vercel.app/tools/guitar-practice-planner/",
-    "applicationCategory":"EducationalApplication",
-    "operatingSystem":"Any modern web browser",
-    "isAccessibleForFree":true,
-    "description":"A free browser-based guitar practice planner with session presets, timer, chord-switch counter and metronome.",
-    "author":{"@type":"Person","name":"Aniket Gawande","url":"https://guitar-classes-in-mumbai.vercel.app/about-aniket-gawande-guitar-instructor-mumbai/"},
-    "publisher":{"@type":"EducationalOrganization","@id":"https://guitar-classes-in-mumbai.vercel.app/#organization"}
+    "@graph":[
+      {
+        "@type":"WebApplication",
+        "@id":"https://guitar-classes-in-mumbai.vercel.app/tools/guitar-practice-planner/#app",
+        "name":"Free Guitar Practice Planner & Timer",
+        "url":"https://guitar-classes-in-mumbai.vercel.app/tools/guitar-practice-planner/",
+        "applicationCategory":"EducationalApplication",
+        "operatingSystem":"Any modern web browser",
+        "isAccessibleForFree":true,
+        "description":"A free browser-based guitar practice planner with session presets, timer, chord-switch counter and metronome.",
+        "isPartOf":{"@id":"https://guitar-classes-in-mumbai.vercel.app/#website"},
+        "author":{"@type":"Person","name":"Aniket Gawande","url":"https://guitar-classes-in-mumbai.vercel.app/about-aniket-gawande-guitar-instructor-mumbai/"},
+        "publisher":{"@type":"EducationalOrganization","@id":"https://guitar-classes-in-mumbai.vercel.app/#organization"}
+      },
+      {
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Guitar Classes in Mumbai","item":"https://guitar-classes-in-mumbai.vercel.app/"},
+          {"@type":"ListItem","position":2,"name":"Guitar Learning Guides","item":"https://guitar-classes-in-mumbai.vercel.app/guides/"},
+          {"@type":"ListItem","position":3,"name":"Guitar Practice Planner & Timer","item":"https://guitar-classes-in-mumbai.vercel.app/tools/guitar-practice-planner/"}
+        ]
+      }
+    ]
   }
   </script>
   <style>
