@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Guitar Practice Planner & Timer | Beginner Practice Tool</title>
-  <meta name="description" content="Build a 15, 30 or 45 minute beginner guitar practice routine with a free browser timer, chord-switch counter and metronome. No signup required.">
+  <title>Free Guitar Practice Planner & Timer | 15, 20, 30 & 45 Min Routines</title>
+  <meta name="description" content="Build a free 15, 20, 30 or 45 minute guitar practice routine with a browser timer, chord-switch counter and metronome. No signup required.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="author" content="Aniket Gawande">
   <link rel="canonical" href="https://guitar-classes-in-mumbai.vercel.app/tools/guitar-practice-planner/">
@@ -27,7 +27,8 @@
         "applicationCategory":"EducationalApplication",
         "operatingSystem":"Any modern web browser",
         "isAccessibleForFree":true,
-        "description":"A free browser-based guitar practice planner with session presets, timer, chord-switch counter and metronome.",
+        "description":"A free browser-based guitar practice planner with 15, 20, 30 and 45 minute session presets, timer, chord-switch counter and metronome.",
+        "featureList":["15, 20, 30 and 45 minute routines","Editable practice blocks","Session timer","Chord-switch counter","Browser metronome","Local device saving"],
         "isPartOf":{"@id":"https://guitar-classes-in-mumbai.vercel.app/#website"},
         "author":{"@type":"Person","name":"Aniket Gawande","url":"https://guitar-classes-in-mumbai.vercel.app/about-aniket-gawande-guitar-instructor-mumbai/"},
         "publisher":{"@type":"EducationalOrganization","@id":"https://guitar-classes-in-mumbai.vercel.app/#organization"}
@@ -45,7 +46,7 @@
   </script>
   <style>
     :root{--bg:#f7f3eb;--ink:#181818;--muted:#666;--card:#fff;--line:#e6ded1;--gold:#b48a45;--dark:#111114;--green:#1f7a4d}
-    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
     a{color:inherit}.wrap{max-width:980px;margin:auto;padding:0 20px}nav{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:20px 0}
     .brand{text-decoration:none;font-weight:800}.small-link{font-size:.9rem;color:#555}
     header{background:var(--dark);color:white;padding:60px 0 52px}.kicker{text-transform:uppercase;letter-spacing:.14em;color:#e6c27d;font-size:.74rem;font-weight:800}
@@ -79,6 +80,7 @@
       <h2>1. Build your practice session</h2>
       <div class="preset-row">
         <button class="preset active" data-preset="15">15 minutes</button>
+        <button class="preset" data-preset="20">20 minutes</button>
         <button class="preset" data-preset="30">30 minutes</button>
         <button class="preset" data-preset="45">45 minutes</button>
       </div>
@@ -122,6 +124,15 @@
     </section>
 
     <section class="panel why">
+      <h2>How to use this guitar practice planner</h2>
+      <p>Pick the amount of time you genuinely have today, then edit the blocks so the routine matches the skill you are working on. Start the timer and stay with one block until it changes rather than jumping between unrelated exercises.</p>
+      <h3>What should I practise next?</h3>
+      <p>Choose the problem that most clearly stopped your last session: a chord change that breaks the rhythm, a strumming pattern that speeds up, a song section where you keep stopping, or a coordination problem while singing. Make that problem the longest block in today's plan.</p>
+      <h3>A simple 20-minute guitar practice example</h3>
+      <p>Try 3 minutes of tuning and warm-up, 5 minutes of chord changes, 5 minutes of rhythm, 5 minutes on one song section, and 2 minutes to note the next target. The new 20-minute preset above loads this structure automatically.</p>
+    </section>
+
+    <section class="panel why">
       <h2>What should a beginner practise?</h2>
       <p>A useful beginner session usually mixes a short warm-up, chord changes, rhythm or strumming, and time spent applying those skills to a song. The exact balance depends on what you are currently struggling with, which is why every block above can be edited.</p>
       <div class="note"><strong>Keep it measurable:</strong> write down one thing you want to improve before starting. Examples: cleaner G–C switches, steadier eighth-note strumming, or playing one verse without stopping.</div>
@@ -143,6 +154,13 @@
         {name:'Chord changes', minutes:5},
         {name:'Rhythm / strumming', minutes:4},
         {name:'Song practice', minutes:3}
+      ],
+      20: [
+        {name:'Tune + warm up', minutes:3},
+        {name:'Chord changes', minutes:5},
+        {name:'Rhythm / strumming', minutes:5},
+        {name:'Song practice', minutes:5},
+        {name:'Review + next target', minutes:2}
       ],
       30: [
         {name:'Tune + warm up', minutes:5},
