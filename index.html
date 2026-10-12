@@ -9,8 +9,8 @@
     <meta name="google-site-verification" content="HcNgmx8LwGrW89bLODOLmGR5g_bjlMl_B7AHooq0gmo" />
 
     <!-- SEO Meta Tags -->
-    <title>Guitar Classes in Mumbai | Private Guitar Teacher Since 2017</title>
-    <meta name="description" content="Guitar classes in Mumbai with Aniket Gawande, teaching since 2017. Private 1-on-1 or shared lessons at your home for beginners and adults.">
+    <title>Guitar Classes in Mumbai | Home Lessons from ₹999</title>
+    <meta name="description" content="Learn guitar at home in Mumbai with Aniket Gawande, teaching since 2017. Beginner and adult lessons from ₹999/30 minutes. See fees and check your area.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Aniket Gawande">
     <link rel="canonical" href="https://guitar-classes-in-mumbai.vercel.app/">
@@ -19,7 +19,7 @@
     <meta name="theme-color" content="#111114">
 
     <!-- Open Graph / Social Media Preview Tags -->
-    <meta property="og:title" content="Guitar Classes in Mumbai | Private Guitar Teacher Since 2017">
+    <meta property="og:title" content="Guitar Classes in Mumbai | Home Lessons from ₹999">
     <meta property="og:description" content="Private guitar classes across Mumbai with Aniket Gawande, teaching since 2017. Lessons take place at the learner’s home.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Guitar Classes in Mumbai">
@@ -27,7 +27,7 @@
     <meta property="og:image" content="https://guitar-classes-in-mumbai.vercel.app/AG.png">
     <meta property="og:image:alt" content="Aniket Gawande, guitar instructor in Mumbai">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Guitar Classes in Mumbai | Private Guitar Teacher Since 2017">
+    <meta name="twitter:title" content="Guitar Classes in Mumbai | Home Lessons from ₹999">
     <meta name="twitter:description" content="Private guitar classes across Mumbai with Aniket Gawande, teaching since 2017. Lessons take place at the learner’s home.">
     <meta name="twitter:image" content="https://guitar-classes-in-mumbai.vercel.app/AG.png">
 
@@ -102,7 +102,6 @@
         }
 
         @media (max-width: 767px) {
-            main section, section[id] { content-visibility: auto; contain-intrinsic-size: 700px; }
             .cursor-note { display: none; }
         }
 
@@ -402,8 +401,10 @@
             transform: translateY(0);
         }
     </style>
+  <link rel="stylesheet" href="/site.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
     <div id="bg-symbols" class="bg-symbols"></div>
     <div id="cursor" class="cursor-note">♪</div>
@@ -434,13 +435,13 @@
             </div>
 
             <!-- Mobile Hamburger Button -->
-            <button id="menu-btn" class="md:hidden text-2xl text-dark focus:outline-none p-1" aria-label="Toggle Menu">
+            <button id="menu-btn" class="md:hidden text-2xl text-dark focus:outline-none p-1" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
                 <span aria-hidden="true">☰</span>
             </button>
         </div>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 py-6 px-6 shadow-xl">
+        <div id="mobile-menu" inert class="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 py-6 px-6 shadow-xl">
             <div class="flex flex-col space-y-4 text-center font-medium tracking-widest text-sm">
                 <a href="/home-guitar-classes-mumbai/" class="py-2 hover:text-amber-600 mobile-nav-item">HOME LESSONS</a>
                 <a href="/areas-we-serve-mumbai/" class="py-2 hover:text-amber-600 mobile-nav-item">GUITAR CLASSES NEAR ME</a>
@@ -453,6 +454,7 @@
     </nav>
 
     <div class="content-layer relative z-10">
+      <main id="main-content">
         
         <!-- 1. FOUNDER & TEACHER SECTION (HERO TOP SECTION) -->
         <section id="founder" class="first-section pb-16 md:pb-24 bg-[#141414] text-white relative overflow-hidden">
@@ -462,8 +464,13 @@
                     <p class="text-amber-400 uppercase tracking-[0.2em] text-xs font-semibold mb-2">Private Guitar Teacher · Home Tuition Across Mumbai · Since 2017</p>
                     <h1 class="text-4xl md:text-6xl font-serif text-white">Guitar Classes in Mumbai</h1>
                     <p class="text-gray-300 text-base md:text-lg leading-relaxed mt-4 max-w-3xl">
-                        Private guitar lessons at the learner's home across Mumbai with Aniket Gawande. Lessons are available for beginners and adults, with 1-on-1 or shared sessions and flexible scheduling subject to travel availability.
+                        Learn guitar at home with Aniket Gawande, teaching in Mumbai since 2017. Start as a complete beginner, return after a break, or work on playing and singing together. Book a private lesson or learn with friends and family at the same home.
                     </p>
+                    <dl class="lesson-summary">
+                        <div><dt>Lesson fees</dt><dd>₹999 / 30 minutes<br>₹1,949 / 1 hour</dd></div>
+                        <div><dt>Lesson location</dt><dd>Your home in Mumbai<br><a href="/areas-we-serve-mumbai/">Check areas served</a></dd></div>
+                        <div><dt>Learning format</dt><dd>Individual or shared<br>One fee for the session</dd></div>
+                    </dl>
                     <div class="flex flex-col sm:flex-row gap-3 mt-6 justify-center md:justify-start">
                         <a href="https://wa.me/918369116001" class="btn-gold text-center px-6 py-3 rounded-full font-semibold">Check Availability on WhatsApp</a>
                         <a href="/guitar-classes-mumbai-fees/" class="border border-amber-400 text-amber-300 text-center px-6 py-3 rounded-full font-semibold hover:bg-amber-400/10 transition">See Current Fees</a>
@@ -476,10 +483,10 @@
                             <span class="disclaimer-badge">BEFORE BOOKING</span>
                         </div>
                         <p class="text-gray-200 text-sm md:text-base mb-3 font-medium leading-relaxed">
-                            This is private doorstep instruction rather than a low-cost academy batch. The teacher travels to the learner, and availability depends on your Mumbai area and preferred time.
+                            Send your Mumbai locality, preferred days and lesson length. Aniket checks the travel route and confirms a suitable time before you book.
                         </p>
                         <p class="text-gray-300 text-xs md:text-sm leading-relaxed">
-                            Lessons focus on chords, rhythm, strumming, playing while singing, listening skills and becoming more independent over time. Progress varies by learner and practice.
+                            The first class is free with the 24-session course only. Pay-as-you-go lessons start at ₹999 for 30 minutes. <a href="/guitar-classes-mumbai-fees/" class="underline">See all fees and course terms</a>.
                         </p>
                     </div>
                 </div>
@@ -509,11 +516,11 @@
                         </div>
 
                         <p class="text-gray-300 text-base md:text-lg leading-relaxed font-light">
-                            Founded in 2017, Guitar Classes in Mumbai was created by Mr. Aniket Gawande with a singular vision: to make guitar learning intuitive, personal, and deeply rewarding. 
+                            Aniket Gawande teaches private guitar lessons at students' homes across Mumbai. You work directly with the instructor, with the lesson adapted to your current playing level and the music you want to learn.
                         </p>
 
                         <p class="text-gray-300 text-base md:text-lg leading-relaxed font-light">
-                            Teaching since 2017, Aniket has worked with learners across different ages and experience levels, including complete beginners and working adults. The focus is private home tuition, practical musical understanding, rhythm, chord changes, playing while singing, and helping learners become more independent over time.
+                            Teaching since 2017, Aniket works with complete beginners, working adults and returning learners. Lessons focus on clean chord changes, steady rhythm, strumming, listening and coordinating guitar with singing. <a href="/about-aniket-gawande-guitar-instructor-mumbai/" class="underline">Read about Aniket's teaching approach</a> or <a href="#gallery" class="underline">see the student gallery</a>.
                         </p>
 
                         <!-- High-End Quote Box -->
@@ -1133,6 +1140,7 @@
             </div>
         </section>
 
+      </main>
         <footer class="py-8 border-t border-gray-200">
             <div class="container mx-auto px-5 text-center text-gray-500 text-sm">
                 <p>&copy; 2026 Guitar Classes in Mumbai. All Rights Reserved.</p>
@@ -1146,14 +1154,18 @@
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-        });
-
-        mobileNavItems.forEach(item => {
-            item.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-            });
+        function setMenuOpen(open) {
+            mobileMenu.classList.toggle('active', open);
+            mobileMenu.inert = !open;
+            menuBtn.setAttribute('aria-expanded', String(open));
+        }
+        menuBtn.addEventListener('click', () => setMenuOpen(menuBtn.getAttribute('aria-expanded') !== 'true'));
+        mobileNavItems.forEach(item => item.addEventListener('click', () => setMenuOpen(false)));
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true') {
+                setMenuOpen(false);
+                menuBtn.focus();
+            }
         });
 
         // Load and play gallery videos only when they are close to the viewport.

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/about-aniket-gawande-guitar-instructor-mumbai/index.html",
+      "destination": "/about-aniket-gawande-guitar-instructor-mumbai/",
+      "permanent": true
+    },
+    {
+      "source": "/areas-we-serve-mumbai/index.html",
+      "destination": "/areas-we-serve-mumbai/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/beginner-guitar-practice-plan/index.html",
+      "destination": "/guides/beginner-guitar-practice-plan/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/home-guitar-lessons-vs-music-academy-mumbai/index.html",
+      "destination": "/guides/home-guitar-lessons-vs-music-academy-mumbai/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/how-to-choose-guitar-teacher-mumbai/index.html",
+      "destination": "/guides/how-to-choose-guitar-teacher-mumbai/",
+      "permanent": true
+    },
+    {
+      "source": "/guides/index.html",
+      "destination": "/guides/",
+      "permanent": true
+    },
+    {
+      "source": "/guitar-classes-for-adults-mumbai/index.html",
+      "destination": "/guitar-classes-for-adults-mumbai/",
+      "permanent": true
+    },
+    {
+      "source": "/guitar-classes-for-beginners-mumbai/index.html",
+      "destination": "/guitar-classes-for-beginners-mumbai/",
+      "permanent": true
+    },
+    {
+      "source": "/guitar-classes-mumbai-fees/index.html",
+      "destination": "/guitar-classes-mumbai-fees/",
+      "permanent": true
+    },
+    {
+      "source": "/home-guitar-classes-mumbai/index.html",
+      "destination": "/home-guitar-classes-mumbai/",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/guitar-practice-planner/index.html",
+      "destination": "/tools/guitar-practice-planner/",
+      "permanent": true
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+/* Shared navigation and booking information; no JavaScript required. */
+.site-nav{box-sizing:border-box;max-width:1160px;margin:0 auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;color:#161616;background:#fdfbf7}
+.site-nav .site-brand{font-family:Georgia,'Times New Roman',serif;font-size:1.2rem;font-weight:700;line-height:1.3;text-decoration:none;color:#161616}
+.site-nav .site-nav-links{display:flex;flex-wrap:wrap;align-items:center;gap:4px 16px}
+.site-nav .site-nav-links a{display:inline-flex;align-items:center;min-height:44px;color:#333;font-size:.9rem;line-height:1.4;text-decoration:underline;text-underline-offset:4px}
+.site-nav .site-nav-links a[aria-current="page"]{font-weight:750;color:#755216}
+.site-breadcrumbs{box-sizing:border-box;max-width:980px;margin:0 auto;padding:10px 22px 16px;display:flex;flex-wrap:wrap;justify-content:flex-start;gap:6px;color:#555;font-size:.85rem;line-height:1.5}
+.site-breadcrumbs a{color:#4d3918;text-underline-offset:3px}
+.skip-link{position:absolute;left:16px;top:-100px;padding:12px 18px;z-index:10000;background:#111;color:#fff;border:2px solid #c5a059;border-radius:6px}
+.skip-link:focus{top:10px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #916920;outline-offset:4px}
+.lesson-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:24px 0 18px;padding:0;text-align:left}
+.lesson-summary div{padding:14px 16px;border:1px solid #51432c;border-radius:12px;background:#201d18}
+.lesson-summary dt{color:#e8c788;font-size:.78rem;font-weight:650;letter-spacing:.02em}
+.lesson-summary dd{margin:5px 0 0;color:#fff;font-size:.98rem;line-height:1.5}
+.lesson-summary a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.fee-table-wrap{overflow-x:auto;max-width:100%;margin:20px 0;border:1px solid #ded7ca;border-radius:12px;background:#fff}
+.fee-table{border-collapse:collapse;width:100%;font-size:.94rem;line-height:1.5;text-align:left}
+.fee-table caption{text-align:left;padding:14px 16px;font-weight:650;color:#34302a}
+.fee-table th,.fee-table td{padding:13px 16px;border-top:1px solid #e4ded4;vertical-align:top}
+.fee-table thead{background:#f4eee3}
+.fee-table th{font-weight:650}
+.cta{color:#161616!important}
+#main-content{scroll-margin-top:96px}
+@media(max-width:720px){
+  .site-nav{display:block;padding:16px 20px 10px}
+  .site-nav .site-brand{display:inline-block;margin-bottom:8px}
+  .site-nav .site-nav-links{display:flex;gap:0 15px}
+  .site-nav .site-nav-links a{font-size:.87rem;min-height:40px}
+  .site-breadcrumbs{padding:8px 20px 14px;font-size:.8rem}
+  .lesson-summary{grid-template-columns:1fr;gap:8px;margin-top:20px}
+  .lesson-summary div{display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:baseline;padding:12px 14px}
+  .lesson-summary dd{margin:0}
+  .fee-table th,.fee-table td{padding:11px 10px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.bg-symbols,.cursor-note{display:none!important}}
