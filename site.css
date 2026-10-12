@@ -20,7 +20,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #91
 .fee-table th,.fee-table td{padding:13px 16px;border-top:1px solid #e4ded4;vertical-align:top}
 .fee-table thead{background:#f4eee3}
 .fee-table th{font-weight:650}
-.cta{color:#161616!important}
+.cta,.btn-gold{color:#161616!important}
+.home-nav-links{gap:24px}
+.home-nav-links .nav-link{margin-left:0!important}
 #main-content{scroll-margin-top:96px}
 @media(max-width:720px){
   .site-nav{display:block;padding:16px 20px 10px}
